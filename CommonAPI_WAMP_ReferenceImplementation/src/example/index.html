@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Franca Infotainment UI</title>
+	
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css"></link>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+<!--
+-->
+
+	<script src="autobahn-js-built/autobahn.min.js"></script>
+    <script src="msgpack-javascript/msgpack.js"></script>
+
+	<!-- own JS files -->
+	<script src="ExampleCaller.js"></script>
+
+</head>
+
+<body>
+
+<div data-role="page" id="pHome" pagetype="standard" class="franca-example">
+
+	<div role="main" class="ui-content franca-content">
+
+		<table class="bigframe" >
+			<td><div style="width: 200px">
+			<hr/>
+			<p><input id="m1" type="button" value="play" class="button1"></p>
+			<p><input id="m2" type="button" value="add2" class="button1"></p>
+			<p><input id="m3" type="button" value="add2struct" class="button1"></p>
+			<p><input id="m4" type="button" value="add2nestedStruct" class="button1"></p>
+			<hr/>
+			</div></td></tr>
+			<tr><td colspan="2"><p id="current-title" class="text1"></p></td></tr>
+		</table>
+	</div><!-- /content -->
+</div><!-- /page one -->
+
+<script type="text/javascript">
+	initApp();
+</script>
+
+</body>
+</html>
