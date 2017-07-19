@@ -127,8 +127,8 @@ void ExampleInterfaceWampStubAdapterInternal::provideRemoteMethods() {
     });
     provide_future_play.get();
 
-    boost::future<void> provide_future_add2 = connection->session_->provide("add2",
-//    boost::future<void> provide_future_add2 = connection->session_->provide(getWampAddress().getRealm() + ".add2",
+//    boost::future<void> provide_future_add2 = connection->session_->provide("add2",
+    boost::future<void> provide_future_add2 = connection->session_->provide(getWampAddress().getRealm() + ".add2",
     		std::bind(&ExampleInterfaceWampStubAdapterInternal::wrap_add2, this, std::placeholders::_1))
 		.then([&](boost::future<autobahn::wamp_registration> registration) {
         try {

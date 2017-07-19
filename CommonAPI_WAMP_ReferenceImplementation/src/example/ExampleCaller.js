@@ -69,8 +69,8 @@ var connection = new autobahn.Connection({
             console.log("Connected", details);
 
         // call a remote procedure
-        session.call('add2', [1, 11, 22]).then(
-//        session.call('local:example.ExampleInterface:commonapi.examples.HelloWorld.add2', [1, 11, 22]).then(
+//        session.call('add2', [1, 11, 22]).then(
+        session.call('local:example.ExampleInterface:commonapi.examples.HelloWorld.add2', [1, 11, 22]).then(
 //        session.call('local:example.ExampleInterface:commonapi.examples.HelloWorld.play', [1]).then(
                function (res) {
                   console.log("Call succeeded. Result:", res);
@@ -158,8 +158,8 @@ function add2() {
         console.log("Connected", details);
 
         // call a remote procedure
-        session.call('add2', [1, 11, 22]).then(
-//        session.call('local:example.ExampleInterface:commonapi.examples.HelloWorld.add2', [1, 11, 22]).then(
+//        session.call('add2', [1, 11, 22]).then(
+        session.call('local:example.ExampleInterface:commonapi.examples.HelloWorld.add2', [1, 11, 22]).then(
             function (res) {
                 console.log("Call succeeded. Result:", res);
                 console.log("sum:", res.args[0]);
